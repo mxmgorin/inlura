@@ -1,0 +1,7 @@
+[package]
+name = "inlura"
+version = "0.1.0"
+edition = "2021"
+authours = ["troidem <mxmgorin@gmail.com>"]
+
+[dependencies]
