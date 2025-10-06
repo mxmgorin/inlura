@@ -1,4 +1,4 @@
-# rulu
+# luar
 An interpreter for the Lua programming language build in rust for fun and learnig.
 
 ## References

@@ -1,3 +1,4 @@
+use luar::{lexer::Lexer, parser, vm::ExeState};
 use std::{env, fs::File, io::Read};
 
 fn main() {
@@ -10,7 +11,7 @@ fn main() {
     let mut file = File::open(&args[1]).unwrap();
     let mut src = String::new();
     file.read_to_string(&mut src).unwrap();
-    let lex = inlura::lex::Lex::new(src);
-    let proto = inlura::parse::load(lex);
-    inlura::vm::ExeState::new().execute(&proto);
+    let lex = Lexer::new(src);
+    let proto = parser::load(lex);
+    ExeState::new().execute(&proto);
 }

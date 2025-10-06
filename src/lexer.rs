@@ -7,12 +7,12 @@ pub enum Token {
 }
 
 #[derive(Debug)]
-pub struct Lex {
+pub struct Lexer {
     src: String,
     pos: usize,
 }
 
-impl Lex {
+impl Lexer {
     pub fn new(src: impl Into<String>) -> Self {
         Self {
             src: src.into(),
