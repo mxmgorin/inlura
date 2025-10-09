@@ -1,5 +1,5 @@
 // The lexical analysis module
-#[derive(Debug)]
+#[derive(Debug, PartialEq)]
 pub enum Token {
     // keywords
     And,
