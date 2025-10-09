@@ -17,7 +17,7 @@ pub fn load(mut lex: Lexer) -> ParseProto {
                 constants.push(LValue::String(name));
                 byte_codes.push(Bytecode::GetGlobal(0, (constants.len() - 1) as u8));
 
-                if let Token::String(s) = lex.next() {
+                if let Token::ConstString(s) = lex.next() {
                     constants.push(LValue::String(s));
                     byte_codes.push(Bytecode::LoadConst(1, (constants.len() - 1) as u8));
                     byte_codes.push(Bytecode::Call(0, 1));
